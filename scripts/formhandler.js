@@ -1,8 +1,8 @@
 (function (window) {
   'use strict';
   var App = window.App || {};
-  // var $ = window.jQuery;
-  var $ = window.$;
+  var $ = window.jQuery;
+  // var $ = window.$;
 
   function FormHandler (selector) {
     if (!selector) {
@@ -28,6 +28,20 @@
       fn(data);
       this.reset();
       this.elements[0].focus();
+    });
+  };
+
+  FormHandler.prototype.addInputHandler = function (fn) {
+    console.log('Setting input handler for form');
+    this.$formElement.on('input', '[name="emailAddress"]', function (event) {
+      var emailAddress = event.target.value;
+      var message = '';
+      if (fn(emailAddress)) {
+        event.target.setCustomValidity('');
+      } else {
+        message = emailAddress + ' 不是 Gmail，请使用 Gmail';
+        event.target.setCustomValidity(message);
+      }
     });
   };
 
