@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>订单系统</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body class="container">
+  <header>
+    <h1>订单系统</h1>
+  </header>
+  <section>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form data-coffee-order="form">
+          <div class="form-group">
+            <label for="orders">姓名</label>
+            <input class="form-control" name="name" id="orders" autofocus>
+          </div>
+          <div class="form-group">
+            <label for="emailInput">邮箱</label>
+            <input class="form-control" type="email" name="emailAddress" id="emailInput" value="" placeholder="yourEmail.xxx.com">
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="meal" value="A 餐">
+              A 餐
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="meal" value="B 餐" checked>
+              B 餐
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="meal" value="C 餐">
+              C 餐
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="drink">饮料</label>
+            <select name="drink" id="drink" class="form-control">
+              <option value="">无</option>
+              <option value="可乐">可乐</option>
+              <option value="雪碧">雪碧</option>
+              <option value="冰红茶">冰红茶</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="strengthLevel">订单数量</label>
+            <input type="range" name="strength" id="strengthLevel" value="30">
+          </div>
+          <button type="submit" class="btn btn-success">提交订单</button>
+          <button type="reset" class="btn btn-warning">重置</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <h4>待处理订单：</h4>
+        <div data-coffee-order="checklist">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="scripts/checklist.js"></script>
+  <script src="scripts/formhandler.js"></script>
+  <script src="scripts/datastore.js"></script>
+  <script src="scripts/truck.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
