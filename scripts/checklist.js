@@ -49,9 +49,9 @@
       'value': orders.emailAddress
     });
 
-    var description = orders.meal + '-';
-    if (orders.drink) {
-      description += orders.drink + '-';
+    var description = orders.coffee + '-';
+    if (orders.bulk) {
+      description += orders.bulk + '-';
     }
 
     description += orders.strength + '份';

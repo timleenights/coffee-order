@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>订单系统</title>
+  <title>咖啡订单系统</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
     form :focus:required:invalid {
@@ -14,7 +14,7 @@
 </head>
 <body class="container">
   <header>
-    <h1>订单系统</h1>
+    <h1>咖啡订单系统</h1>
   </header>
   <section>
     <div class="panel panel-default">
@@ -30,29 +30,28 @@
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="meal" value="A 餐">
-              A 餐
+              <input type="radio" name="coffee" value="拿铁">
+              拿铁
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="meal" value="B 餐" checked>
-              B 餐
+              <input type="radio" name="coffee" value="卡布奇诺" checked>
+              卡布奇诺
             </label>
           </div>
           <div class="radio">
             <label>
-              <input type="radio" name="meal" value="C 餐">
-              C 餐
+              <input type="radio" name="coffee" value="美式咖啡">
+              美式咖啡
             </label>
           </div>
           <div class="form-group">
-            <label for="drink">饮料</label>
-            <select name="drink" id="drink" class="form-control">
-              <option value="">无</option>
-              <option value="可乐">可乐</option>
-              <option value="雪碧">雪碧</option>
-              <option value="冰红茶">冰红茶</option>
+            <label for="bulk">份量</label>
+            <select name="bulk" id="bulk" class="form-control">
+              <option value="grande">中杯</option>
+              <option value="tall">小杯</option>
+              <option value="benti">大杯</option>
             </select>
           </div>
           <div class="form-group">
@@ -77,6 +76,7 @@
   <script src="scripts/validation.js"></script>
   <script src="scripts/checklist.js"></script>
   <script src="scripts/formhandler.js"></script>
+  <script src="scripts/remotedatastore.js"></script>
   <script src="scripts/datastore.js"></script>
   <script src="scripts/truck.js"></script>
   <script src="scripts/main.js"></script>
