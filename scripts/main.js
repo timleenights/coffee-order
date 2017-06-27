@@ -11,7 +11,7 @@
   var Validation = App.Validation;
   var remoteDS = new RemoteDataStore(SERVER_URL);
   var CheckList = App.CheckList;
-  // var myTruck = new Truck('Customer1',  DataStore());  // 本地存储
+  // var myTruck = new Truck('Customer', new DataStore());  // 本地存储
   var myTruck = new Truck('Customer1', remoteDS);
   window.myTruck = myTruck;
   var checkList = new CheckList(CHECKLIST_SELECTOR);
